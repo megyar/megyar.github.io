@@ -5,7 +5,7 @@ let user_email = document.getElementById("user_email");
 let user_phone = document.getElementById("user_phone");
 let user_message = document.getElementById("user_message");
 
-// errors
+// error message fields
 let fnameVal = document.getElementById("fnameVal");
 let lnameVal = document.getElementById("lnameVal");
 let emailVal = document.getElementById("emailVal");
@@ -91,16 +91,25 @@ window.onload = function() {
         event.preventDefault();
 
         if (validateContactForm()) {
-            const fields = {
-                user_fname: user_fname.value,
-                user_lname: user_lname.value,
-                user_email: user_email.value,
-                user_phone: user_phone.value,
-                user_message: user_message.value
-            }
+            // const fields = {
+            //     user_fname: user_fname.value,
+            //     user_lname: user_lname.value,
+            //     user_email: user_email.value,
+            //     user_phone: user_phone.value,
+            //     user_message: user_message.value
+            // }
 
-            emailjs.sendForm(serviceId, templateId, this);
-            // console.log("email sent!!");
+            emailjs.sendForm(serviceId, templateId, this).then(function() {
+                console.log("email sent!");
+                // clear all form fields
+                user_fname.value = "";
+                user_lname.value = "";
+                user_email.value = "";
+                user_phone.value = "";
+                user_message.value ="";
+            }, function(error) {
+                console.log('email failed to send');
+            })
         }
     })
 }
