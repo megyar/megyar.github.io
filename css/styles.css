@@ -79,3 +79,38 @@ h2 {
 .dropdown:hover .dropdown-items {display: block;}
   
 .dropdown:hover .dropbtn {background-color: #ff0077ce;}
+
+/* footer */
+.footer {
+    background-color: #ff0077ce;
+    color: #ffa9cd;
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+    width: 99%;
+}
+
+.footer-content {
+    color: white;
+    align-items: center;
+}
+
+.footer a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .footer a:hover {
+    background-color: #ffa9cd;
+    color: black;
+  }
+  
+  .footer a.active {
+    background-color: #04AA6D;
+    color: white;
+  }
