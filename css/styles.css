@@ -25,7 +25,7 @@ h2 {
     display: block;
     color: #f2f2f2;
     text-align: center;
-    padding: 14px 16px;
+    padding: 16px;
     text-decoration: none;
     font-size: 17px;
 }
@@ -43,3 +43,39 @@ h2 {
 .topnav .icon {
     display: none;
 }
+
+/* dropdown class links */
+.dropbtn {
+    background-color: #ffa9cd;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+}
+  
+.dropdown {
+    position: absolute;
+    display: inline-block;
+}
+  
+.dropdown-items {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+  
+.dropdown-items a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+  
+.dropdown-content a:hover {background-color: #ddd;}
+  
+.dropdown:hover .dropdown-items {display: block;}
+  
+.dropdown:hover .dropbtn {background-color: #ff0077ce;}
