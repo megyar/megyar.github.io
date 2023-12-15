@@ -6,6 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>Meghana's CISC 474 Personal Website</title>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </head>
 
 <body>
@@ -18,16 +19,16 @@
             Personal Web Page 1,
             megyar@udel.edu
             -->
-            Meghana Yarlagadda
+            Contact Me!
         </h1>
     </div>
 
     <div class="topnav" id="myTopnav">
-        <a href="https://mbiet11.github.io/">Previous Student</a> <!-- break up into different divs-->
         <a href="index.html">Home</a>
-        <a href="aboutMe.html">About Me</a>
-        <a href="contact.html" class="active">Contact Form</a>
+        <a href="aboutMe.html">About</a>
+        <a href="contact.html" class="active">Contact</a>
         <a href="https://mattm401.github.io/">Course Page</a>
+        <a href="https://mbiet11.github.io/">Previous Student</a> <!-- break up into different divs-->
         <a href="https://devin-c64.github.io/">Next Student</a>
         <!-- <a href="javascript:void(0);" class="icon" onclick="myFunction()">
           <i class="fa fa-bars"></i>
@@ -36,38 +37,46 @@
 
     <br>
 
-    <div class="container">
-        <form action="action_page.php">
+    <div class="contactForm">
+        <form id="contactForm">
       
           <label for="user_fname">First Name: </label>
           <input type="text" id="user_fname" name="firstname" placeholder="Enter your first name">
+          <span id="fnameVal" style="color: rgb(187, 0, 0);"></span>
       
           <br><br>
 
           <label for="user_lname">Last Name: </label>
           <input type="text" id="user_lname" name="lastname" placeholder="Enter your last name">
+          <span id="lnameVal" style="color: rgb(187, 0, 0);"></span>
       
           <br><br>
 
           <label for="user_email">Email Address: </label>
           <input type="text" id="user_email" name="email" placeholder="xyz@domain.com">
+          <span id="emailVal" style="color: rgb(187, 0, 0);"></span>
 
           <br><br>
+
           <label for="user_phone">Phone Number: </label>
           <input type="text" id="user_phone" name="phone" placeholder="123-456-7890">
+          <span id="phoneVal" style="color: rgb(187, 0, 0);"></span>
 
           <br><br>
       
           <label for="user_message">Message: </label>
           <br>
-          <textarea id="user_message" name="message" placeholder="Write something..." style="height:200px; width:300px"></textarea>
+          <textarea id="user_message" name="message" placeholder="Your Message" style="height:200px; width:300px"></textarea>
+          <span id="messageVal" style="color: rgb(187, 0, 0);"></span>
           
           <br><br><br>
 
-          <input type="submit" value="Submit">
+          <input type="submit" id="send_message" value="Send">
       
         </form>
       </div>
+
+    <script src="javascript/contact.js"></script>
 
 </body>
 
